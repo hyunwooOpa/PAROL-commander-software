@@ -39,7 +39,7 @@ robot = DHRobot(
         RevoluteDH(d=a1, a=a2, alpha=alpha_DH[0]),
         RevoluteDH(a=a3,d = 0,alpha=alpha_DH[1]),
         RevoluteDH(alpha= alpha_DH[2], a= -a4),
-        RevoluteDH(d=-a5, a=0, alpha=alpha_DH[3], offset=pi/2),
+        RevoluteDH(d=-a5, a=0, alpha=alpha_DH[3]),
         RevoluteDH(a=0,d=0,alpha=alpha_DH[4]),
         RevoluteDH(alpha=alpha_DH[5], a = -a7,d = -a6),
     ],
@@ -49,13 +49,14 @@ robot = DHRobot(
 #pyplot = rtb.backends.PyPlot()
 
 # in degrees
-Joints_standby_position_degree = np.array([0,-90,180,0,0,180]) 
+Joints_standby_position_degree = np.array([0,-90,180,0,0,180])
 # in radians
 Joints_standby_position_radian = [np.deg2rad(angle) for angle in Joints_standby_position_degree]
 
 # values you get after homing robot and moving it to its most left and right sides
 # In degrees
-Joint_limits_degree =[[-123.046875,123.046875], [-145.0088,-3.375], [107.866,287.8675], [-105.46975,105.46975], [-90,90], [0,360]] 
+# Joint_limits_degree =[[-123.046875,123.046875], [-145.0088,-3.375], [107.866,287.8675], [-105.46975,105.46975], [-90,90], [0,360]] 
+Joint_limits_degree =[[-123.046875,123.046875], [-145.0088,-3.375], [107.866,287.8675], [-15.46975,195.46975], [-90,90], [0,360]] 
 
 # in radians
 Joint_limits_radian = []

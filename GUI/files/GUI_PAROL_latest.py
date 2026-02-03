@@ -35,13 +35,11 @@ logging.basicConfig(level = logging.DEBUG,
 
 # Finds out where the program and images are stored
 my_os = platform.system()
-if my_os == "Windows":
-    Image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)))
-    logging.debug("Os is Windows")
-else:
-    Image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)))
-    logging.debug("Os is Linux")
-    
+Image_path = os.path.join(os.path.dirname(os.path.realpath(__file__)))
+logging.debug("Os is MacOS")
+
+
+
 logging.debug(Image_path)
 
 text_size = 14
@@ -75,8 +73,8 @@ Joint4_value = ""
 Joint5_value = ""
 Joint6_value = ""
 
-#customtkinter.set_appearance_mode("Light")  # Modes: "System" (standard), "Dark", "Light"
-customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
+customtkinter.set_appearance_mode("Light")  # Modes: "System" (standard), "Dark", "Light"
+# customtkinter.set_appearance_mode("Dark")  # Modes: "System" (standard), "Dark", "Light"
 customtkinter.set_default_color_theme("blue")  # Themes: "blue" (standard), "green", "dark-blue"
 
 left_jog_buttons = [0,0,0,0,0,0]
