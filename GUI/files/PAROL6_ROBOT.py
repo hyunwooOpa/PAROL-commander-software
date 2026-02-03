@@ -31,13 +31,15 @@ a6 = 62.8 / 1000
 a7 = 45.25 / 1000
 
 alpha_DH = [-pi / 2,pi,pi/2,-pi/2,pi/2,pi]
+# To this (adding the offset):
+#RevoluteDH(d=-a5, a=0, alpha=alpha_DH[3], offset=pi/2),
 
 robot = DHRobot(
     [
         RevoluteDH(d=a1, a=a2, alpha=alpha_DH[0]),
         RevoluteDH(a=a3,d = 0,alpha=alpha_DH[1]),
         RevoluteDH(alpha= alpha_DH[2], a= -a4),
-        RevoluteDH(d=-a5, a=0, alpha=alpha_DH[3]),
+        RevoluteDH(d=-a5, a=0, alpha=alpha_DH[3], offset=pi/2),
         RevoluteDH(a=0,d=0,alpha=alpha_DH[4]),
         RevoluteDH(alpha=alpha_DH[5], a = -a7,d = -a6),
     ],
